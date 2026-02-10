@@ -22,6 +22,11 @@ router.route("/login")
     userController.login                 
   );
 
+  router.get("/", (req, res) => {
+  res.render("home"); 
+});
+
+
 router.get("/logout", userController.logout);  
 
 module.exports = router;
